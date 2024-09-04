@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """A module for Auth class"""
-from typing import List, TypeVar
 import re
+from flask import request
+from typing import List, TypeVar
+
 
 class Auth():
     """ A class for Authentication"""
