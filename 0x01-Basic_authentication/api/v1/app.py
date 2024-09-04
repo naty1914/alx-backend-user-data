@@ -37,11 +37,13 @@ def unauthorized_error(error) -> str:
 
 @app.errorhandler(403)
 def forbidden_error(error) -> str:
+    """It is an error handler for 403 forbidden error"""
     return jsonify({"error": "Forbidden"}), 403
 
 
 @app.before_request
 def before_request():
+    """It is a function to execute before each request"""
     if auth:
         excluded_paths = [
             '/api/v1/status/',
